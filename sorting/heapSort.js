@@ -47,6 +47,6 @@ function heapSort(input) {
     }
 }
 
-let arr = [3, 0, 2, 5, -1, 4, 1];
+const arr = [3, 0, 2, 5, -1, 4, 1, -2];
 heapSort(arr);
 console.log(arr);
