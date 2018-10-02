@@ -1,4 +1,6 @@
 // JavaScript implementation of counting sort
+//
+// Author: Dito Baskoro
 
 function countingSort(arr, min, max)
   {
