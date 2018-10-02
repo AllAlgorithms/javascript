@@ -10,3 +10,6 @@ function isPrime(n){
   }
   return true;
 }
+
+// isPrime(137); true
+// isPrime(237); false
