@@ -2,6 +2,8 @@
 //
 // Author: Nikoals Huebecker
 
+// Time Complexity O(n)
+
 function fibonacci(n){
   var fib = [0, 1];
   
