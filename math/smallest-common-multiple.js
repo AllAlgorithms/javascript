@@ -29,4 +29,4 @@ function smallestCommons(arr) {
  return quot;
 }
 
-smallestCommons([1,5]);
+smallestCommons([1,5]);       //Example of given numbers
