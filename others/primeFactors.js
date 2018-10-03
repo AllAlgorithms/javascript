@@ -14,4 +14,5 @@ function primeFactors(n){
   return factors;
 }
 
-// primeFactors(69); [3, 23]
+primeFactors(69); 
+// -> [3, 23]
