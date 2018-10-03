@@ -2,6 +2,8 @@
 	<img width="400" height="270" src="http://konpa.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg">
 	<br>
 	<br>
+	<br>
+	<br>
 	<img src="https://cdn.abranhe.com/projects/algorithms/algorithms.svg" width="400px">
   <br>
 	<br>
@@ -16,19 +18,21 @@
 
 ## Contents
 
-- [Arithmetic Analysis]()
-- [File Transfer Protocol]()
-- [Graphs]()
-- [Math]()
-- [Neutral Network]()
-- [Ciphers]()
-- [Data Structures]()
-- [Dynamic Programming]()
-- [Hashes]()
-- [Searches]()
-- [Sorting]()
-- [Strings]()
-- [Traversals]()
+- [Arithmetic Analysis](arithmetic-analysis)
+- [File Transfer Protocol](file-transfer-protocol)
+- [Greedy Algorithms](greedy-algorithms)
+- [Graphs](graphs)
+- [Math](math)
+- [Neutral Network](neutral-network)
+- [Ciphers](ciphers)
+- [Data Structures](data-structures)
+- [Dynamic Programming](dynamic-programming)
+- [Hashes](hashes)
+- [Searches](searches)
+- [Sorting](sorting)
+- [Strings](strings)
+- [Traversals](traversals)
+- [Others](others)
 
 ## License
 
@@ -40,3 +44,10 @@ To the extent possible under law, [Carlos Abraham](https://go.abranhe.com/github
 
 
 [mit-license]: https://cdn.abraham.gq/projects/algorithms/mit-license.png
+
+<div align="center">
+	<a href="https://github.com/abranhe/algorithms">
+		<img src="https://cdn.abranhe.com/projects/algorithms/logo.svg" width="50px">
+	</a>
+  <br>
+</div>
