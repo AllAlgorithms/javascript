@@ -4,7 +4,7 @@
 	<br>
 	<br>
 	<br>
-	<img src="https://cdn.abranhe.com/projects/algorithms/algorithms.svg" width="400px">
+	<img src="https://cdn.abranhe.com/projects/algorithms/algorithms.svg" width="50%">
   <br>
 	<br>
   <p>All ▲lgorithms implemented in Javascript</p>
@@ -18,8 +18,6 @@
 
 ## Contents
 
-- [Arithmetic Analysis](arithmetic-analysis)
-- [File Transfer Protocol](file-transfer-protocol)
 - [Greedy Algorithms](greedy-algorithms)
 - [Graphs](graphs)
 - [Math](math)
