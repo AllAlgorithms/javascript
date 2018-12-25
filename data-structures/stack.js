@@ -1,5 +1,6 @@
 /**
- * @author Rashik Ansar
+ * @author Rashik Ansar and Luiz Guerra
+ * 
  *
  * Implemtaion of Stack data structure
  * Stack follows LIFO (Last In First Out) priniciple
@@ -62,6 +63,42 @@ class Stack {
     }
     return this.first.data;
   }
+  
+  /**
+   * @returns size of the Stack
+   */
+  size() {
+    return this.size;
+  }
+  
+  /**
+   * @returns if Stack is empty
+   */
+  isEmpty() {
+    return this.size == 0;
+  }
+  
+  /**
+   * clears the Stack
+   */
+  clear() {
+    this.first = null;
+    this.last = null;
+    this.size = 0;
+  }
+  
+  /**
+   * @returns the Stack
+   */
+  toString() {
+    let str = ""; 
+    let aux = this.first;
+    for (let i = 0; i < this.count; i++) 
+        str +=  aux.element + " ";
+    		aux = aux.next;
+    return str;
+  }
+    
 }
 
 class Node {
