@@ -10,6 +10,7 @@ class BinarySearchTree {
     constructor() {
         this.root = null;
     }
+
     insert(value) {
         var newNode = new Node(value);
         if (this.root === null) {
@@ -34,6 +35,7 @@ class BinarySearchTree {
             }
         }
     }
+
     find(value) {
         if (this.root === null) return false;
         var current = this.root,
@@ -50,6 +52,7 @@ class BinarySearchTree {
         if (!found) return undefined;
         return current;
     }
+
     contains(value) {
         if (this.root === null) return false;
         var current = this.root,
@@ -60,6 +63,53 @@ class BinarySearchTree {
             else return true;
         }
         return false;
+    }
+
+    BreadthFirstSearch() {
+        let node = this.root,
+            data = [],
+            queue = [];
+        queue.push(node);
+
+        while (queue.length) {
+            node = queue.shift();
+            data.push(node.value);
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+
+        return data;
+    }
+
+    DepthFirstSearchPreOrder() {
+        let data = [];
+        function traverse(node) {
+            data.push(node.value);
+            if (node.left) traverse(node.left);
+            if (node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return data;
+    }
+    DepthFirstSearchPostOrder() {
+        let data = [];
+        function traverse(node) {
+            if (node.left) traverse(node.left);
+            if (node.right) traverse(node.right);
+            data.push(node.value);
+        }
+        traverse(this.root);
+        return data;
+    }
+    DepthFirstSearchInOrder() {
+        let data = [];
+        function traverse(node) {
+            if (node.left) traverse(node.left);
+            data.push(node.value);
+            if (node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return data;
     }
 }
 
@@ -76,8 +126,13 @@ tree.insert(2);
 tree.insert(16);
 tree.insert(7);
 
-console.log(tree.find(13));
-console.log(tree.find(19));
+console.log("node with value 13:", tree.find(13));
+console.log("node with value 19:", tree.find(19));
 
-console.log(tree.contains(2));
-console.log(tree.contains(534));
+console.log("tree coontais node with value 2:", tree.contains(2));
+console.log("tree coontais node with value 534:", tree.contains(534));
+
+console.log("BreadthFirstSearch:", tree.BreadthFirstSearch());
+console.log("DepthFirstSearchPreOrder:", tree.DepthFirstSearchPreOrder());
+console.log("DepthFirstSearchPostOrder:", tree.DepthFirstSearchPostOrder());
+console.log("DepthFirstSearchInOrder:", tree.DepthFirstSearchInOrder());
