@@ -3,7 +3,7 @@
 // Author: Youcef Madadi
 
 // Binary Tree 
-export default class BinaryTree{
+class BinaryTree{
     left=null;
     right=null;
     value;
