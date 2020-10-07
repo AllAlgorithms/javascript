@@ -1,12 +1,15 @@
 /**
- * @author Rashik Ansar and Luiz Guerra
- * 
- *
- * Implemtaion of Stack data structure
- * Stack follows LIFO (Last In First Out) priniciple
- * For Insertion and Deletion its complexity is O(1)
- * For Accessing and Searching its complexity is O(n)
- */
+* @author Rashik Ansar and Luiz Guerra
+*
+* Implemtaion of Stack data structure
+* Stack follows LIFO (Last In First Out) priniciple
+* For Insertion and Deletion its complexity is O(1)
+* For Accessing and Searching its complexity is O(n)
+*
+* @author Jan Tabacki
+* Fix in toString method, display all elements and get data property instead of element
+* which does no exist.
+*/
 
 class Stack {
   /**
@@ -63,21 +66,21 @@ class Stack {
     }
     return this.first.data;
   }
-  
+
   /**
    * @returns size of the Stack
    */
   size() {
     return this.size;
   }
-  
+
   /**
    * @returns if Stack is empty
    */
   isEmpty() {
     return this.size == 0;
   }
-  
+
   /**
    * clears the Stack
    */
@@ -86,19 +89,20 @@ class Stack {
     this.last = null;
     this.size = 0;
   }
-  
+
   /**
    * @returns the Stack
    */
   toString() {
-    let str = ""; 
+    let str = "";
     let aux = this.first;
-    for (let i = 0; i < this.count; i++) 
-        str +=  aux.element + " ";
-    		aux = aux.next;
+    while (aux) {
+      str += aux.data + " ";
+      aux = aux.next;
+    }
     return str;
   }
-    
+
 }
 
 class Node {
