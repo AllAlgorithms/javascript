@@ -2,24 +2,24 @@
 //
 // Author: Nikolas Huebecker
 
-function isPrime(n){
-  var divisor = 2;
+function isPrime(n) {
+    var divisor = 2;
 
-  while (n > divisor){
-    if(n % divisor == 0){
-     return false; 
-    }else {
-      divisor++;
+    while (n > divisor) {
+        if (n % divisor == 0) {
+            return false;
+        } else {
+            divisor++;
+        }
     }
-  }
-  return true;
+    return true;
 }
 
 // Test
 
-console.log("The number 137 is prime:"
-console.log(isPrime(137))
+console.log("The number 137 is prime:");
+console.log(isPrime(137));
 
 
-console.log("The number 16 is prime:"
-console.log(isPrime(16))
+console.log("The number 16 is prime:");
+console.log(isPrime(16));
