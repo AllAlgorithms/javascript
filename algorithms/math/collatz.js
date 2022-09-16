@@ -1,31 +1,36 @@
-/* Collatz conjecture */
+"use strict";
 
-function collatz(n) {
-    var numbers = []
+/**known Collatz infinite loops*/
+const CYCLES = new Set([
+    1, 0, -1, -5, -17, NaN, Infinity, -Infinity
+]);
 
-    while (n > 1) {
-        numbers.push(n)
-        if (n % 2 === 0) {
-            n = n / 2;
-        } else {
-            n = (3 * n) + 1;
-        }
+/**
+ * Collatz conjecture
+ * @param {number} n
+*/
+const collatz = n => {
+    const numbers = [];
+
+    while ( !CYCLES.has(n) ) {
+        numbers.push(n);
+        n = n % 2 === 0 ? n / 2 : 3 * n + 1;
     }
-    numbers.push(n)
-    return numbers
+    numbers.push(n);
+    return numbers;
 }
 
 console.log(
-    'Collatz conjecture for n = 11',
+    'Hailstone sequence of 11',
     collatz(11)
 )
 
 console.log(
-    'Collatz conjecture for n = 27',
+    'Hailstone sequence of 27',
     collatz(27)
 )
 
 console.log(
-    'Collatz conjecture for n = 51',
+    'Hailstone sequence of 51',
     collatz(51)
 )
