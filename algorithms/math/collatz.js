@@ -6,31 +6,22 @@ const CYCLES = new Set([
 ]);
 
 /**
- * Collatz conjecture
- * @param {number} n
+ * Collatz conjecture calculator.
+ * returns an array containing the Hailstone sequence of `n`.
+ * @param {number} n "seed"
 */
 const collatz = n => {
-    const numbers = [];
+    const sequence = [];
 
     while ( !CYCLES.has(n) ) {
-        numbers.push(n);
+        sequence.push(n);
         n = n % 2 === 0 ? n / 2 : 3 * n + 1;
     }
-    numbers.push(n);
-    return numbers;
+    sequence.push(n);
+    return sequence;
 }
 
-console.log(
-    'Hailstone sequence of 11',
-    collatz(11)
-)
-
-console.log(
-    'Hailstone sequence of 27',
-    collatz(27)
-)
-
-console.log(
-    'Hailstone sequence of 51',
-    collatz(51)
-)
+[11, 27, 51, -7].forEach(n => console.log(
+    `Hailstone sequence of ${n}`,
+    collatz(n)
+));
