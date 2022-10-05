@@ -6,10 +6,10 @@
  * @author Nikolas Huebecker
 */
 const isPrime = n => {
-  n = Math.abs(n);
-
   if (!Number.isInteger(n))
     return false;
+
+  n = Math.abs(n);
 
   if (n % 2 === 0)
     return n === 2;
