@@ -4,6 +4,7 @@
  * JS implementation of primality testing
  * @param {number} n
  * @author Nikolas Huebecker
+ * @author Ricardo Fernández Serrata
 */
 const isPrime = n => {
   if (!Number.isInteger(n))
