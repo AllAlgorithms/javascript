@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * JS implementation of primality testing
  * @param {number} n
